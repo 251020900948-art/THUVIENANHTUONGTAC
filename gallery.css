@@ -1,0 +1,93 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* ===== Heading ===== */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #e2e2e2;
+    letter-spacing: 1px;
+}
+
+/* ===== Featured / Large Image Area ===== */
+#featured {
+    width: 600px;
+    height: 400px;
+    background-color: #16213e;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #0f3460;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: background-image 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+#featured-text {
+    font-size: 1.15rem;
+    color: #c4c4c4;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Thumbnail Container ===== */
+#thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 960px;
+}
+
+/* ===== Individual Thumbnails ===== */
+#thumbnails img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #0f3460;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#thumbnails img:hover,
+#thumbnails img:focus {
+    transform: scale(1.1);
+    border-color: #e94560;
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
+    outline: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 660px) {
+    #featured {
+        width: 95vw;
+        height: 55vw;
+    }
+
+    #thumbnails img {
+        width: 28vw;
+        height: 20vw;
+    }
+}
